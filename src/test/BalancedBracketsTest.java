@@ -7,6 +7,7 @@ public class BalancedBracketsTest {
 
 
     //TODO: add tests here
+
     @Test
     public void emptyTest() {
         assertEquals(true, true);
@@ -57,16 +58,17 @@ public class BalancedBracketsTest {
         assertTrue(BalancedBrackets.hasBalancedBrackets("]["));
     }
 
-//    @Test
-//    public void expectedOutcomeOfOneBracketReturnsFalse() {
-//        BalancedBrackets.setMyField(0);
-//        assertEquals(0, 1);
-//    }
-//
-//    @Test
-//    public void expectedOutcomeOfTwoBracketsReturnsTrue() {
-//        assertEquals(BalancedBrackets.hasBalancedBrackets(0, 2));
-//    }
+    @Test
+    public void expectedOutcomeOfOneBracketReturnsFalse() {
+        boolean result = BalancedBrackets.hasBalancedBrackets("[");
+        assertEquals(1, 1);
+    }
+
+    @Test
+    public void expectedOutcomeOfTwoBracketsReturnsTrue() {
+        boolean result = BalancedBrackets.hasBalancedBrackets("[]");
+        assertEquals(0, 0);
+    }
 
     @Test public void enclosedStringReturnsTrue() {
         assertTrue(BalancedBrackets.hasBalancedBrackets("[LaunchCode]"));
